@@ -1,0 +1,181 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Lato, sans-serif;
+
+}
+
+body{
+    background-color: rgb(19, 19, 19);
+    color: white;
+    
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+header div h1{
+    color: chartreuse;
+}
+
+header #topicList{
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+header #topicList li{
+    list-style: none;
+}
+
+#topicList li a { 
+    text-decoration: none; 
+    color: rgb(230, 230, 230);
+    border-bottom: 2px solid transparent; 
+    padding-bottom: 1rem;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+#topicList li a:hover { 
+    color: #00ff00;
+    border-bottom: 2px solid #00ff00;
+}
+
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+main #home{
+    
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0)), url('./src/folder.jpg'), linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0)); background-repeat: no-repeat; background-position: center; background-size: cover;
+    height: 30rem;
+    padding: 0 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 3rem;
+    border-bottom: 5px solid; 
+    border-image: linear-gradient(to right, transparent, #2bb62b, transparent) 1;
+}
+
+main #home img{
+    width: 300px;
+    align-self: 0;
+}
+
+main #home h1{
+    font-size: 3rem;
+}
+
+main #home h1 span{
+    color: chartreuse;
+}
+
+main #home #infos{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    padding-bottom: 6rem;
+
+}
+
+#infos p{
+    text-align: justify;
+}
+
+#infos #links{
+    display: flex;
+    gap: 1.5rem;
+    font-size: 2rem;
+}
+
+#infos #links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#infos #links a i {
+    color: #00ff00;
+    transition: transform 0.3s ease; 
+}
+
+#infos #links a i:hover {
+    transform: scale(1.2); 
+}
+
+
+#skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: 2rem 0;
+}
+
+#skillsContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 50%;
+    align-items: center;
+    height: 10rem;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+#skillsContainer .item { 
+    background-color: rgba(39, 39, 39, 0.808); /* cinza escuro com transparência */
+     border: 1px solid #00ff00; /* borda verde fininha */ 
+     padding: 20px; text-align: center; color: #00ff00; /* letra verde */ 
+     transition: transform 0.2s; /* transição suave para aumento de tamanho */ 
+     border-radius: 0.4rem;
+    
+    } 
+     
+     
+.item:hover {
+         transform: scale(1.05); /* aumenta levemente de tamanho ao clicar */
+         }
+
+#sobre{
+    height: 30rem;
+    padding: 0 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    width: 100%;
+}
+
+@media(max-width: 425px) {
+
+    header{
+        flex-direction: column;
+        justify-content: center;
+    }
+    main #home{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
