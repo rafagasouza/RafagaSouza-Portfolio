@@ -1,181 +1,271 @@
 *{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: Lato, sans-serif;
-
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+  color: wheat;
 }
 
 body{
-    background-color: rgb(19, 19, 19);
-    color: white;
-    
+  background-color: rgb(19, 19, 19);
 }
-
 
 header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem;
-    width: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+  height: 4rem;
 }
 
-header div h1{
-    color: chartreuse;
+header ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  list-style: none;
 }
 
-header #topicList{
-    display: flex;
-    justify-content: space-between;
-    gap: 4rem;
+header ul li{
+  text-decoration: none;
+  font-weight: 300;
+  
 }
-
-header #topicList li{
-    list-style: none;
-}
-
-#topicList li a { 
-    text-decoration: none; 
-    color: rgb(230, 230, 230);
-    border-bottom: 2px solid transparent; 
-    padding-bottom: 1rem;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-}
-
-#topicList li a:hover { 
-    color: #00ff00;
-    border-bottom: 2px solid #00ff00;
-}
-
 
 main{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    
+  height: auto;
+  width: 100%;
 }
 
-main #home{
-    
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0)), url('./src/folder.jpg'), linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0)); background-repeat: no-repeat; background-position: center; background-size: cover;
-    height: 30rem;
-    padding: 0 8rem;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    gap: 3rem;
-    border-bottom: 5px solid; 
-    border-image: linear-gradient(to right, transparent, #2bb62b, transparent) 1;
+#folder{
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0)), url('./src/img/folder.jpg'), linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0)); 
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.3rem;
+  border-bottom: 3px solid; 
+  border-image: linear-gradient(to right, transparent, #2bb62b, transparent) 1;
 }
 
-main #home img{
-    width: 300px;
-    align-self: 0;
+#folderContent{
+  width: 85%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: wheat;
 }
 
-main #home h1{
-    font-size: 3rem;
+#folderTexts h1{
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
 }
 
-main #home h1 span{
-    color: chartreuse;
+#folderTexts h1 span{
+  color: #00ff00;
 }
 
-main #home #infos{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
-    padding-bottom: 6rem;
-
+#folderTexts p{
+  text-align:start;
+  margin-bottom: 1rem;
 }
 
-#infos p{
-    text-align: justify;
+#links{
+  display: flex;
+  gap: 1.5rem;
+  font-size: 2rem;
 }
 
-#infos #links{
-    display: flex;
-    gap: 1.5rem;
-    font-size: 2rem;
+#links a {
+  text-decoration: none;
+  color: inherit;
+}
+#links a i {
+  color: #00ff00;
+  transition: transform 0.3s ease; 
+}
+#links a i:hover {
+  transform: scale(1.2); 
 }
 
-#infos #links a {
-    text-decoration: none;
-    color: inherit;
+#photoContainer{
+  display: flex;
+  justify-content: center;
 }
 
-#infos #links a i {
-    color: #00ff00;
-    transition: transform 0.3s ease; 
-}
-
-#infos #links a i:hover {
-    transform: scale(1.2); 
+#photoContainer img{
+  width: 320px;
 }
 
 
 #skills{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
 }
 
 #skillsContainer{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 50%;
-    align-items: center;
-    height: 10rem;
-    gap: 2rem;
-    margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 1rem;
+  gap: 1rem;
 }
 
-#skillsContainer .item { 
-    background-color: rgba(39, 39, 39, 0.808); /* cinza escuro com transparência */
-     border: 1px solid #00ff00; /* borda verde fininha */ 
-     padding: 20px; text-align: center; color: #00ff00; /* letra verde */ 
-     transition: transform 0.2s; /* transição suave para aumento de tamanho */ 
-     border-radius: 0.4rem;
-    
-    } 
-     
-     
-.item:hover {
-         transform: scale(1.05); /* aumenta levemente de tamanho ao clicar */
-         }
-
-#sobre{
-    height: 30rem;
-    padding: 0 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
+#skillsContainer span{
+  background-color: rgb(29, 29, 29); /* cinza escuro com transparência */
+  border: 1px solid #00ff00; /* borda verde fininha */ 
+  padding: 20px; 
+  text-align: center; 
+  font-weight: 600;
+  box-shadow: 4px 4px 10px black;
+  color: #00ff00; /* letra verde */ 
+  transition: transform 0.2s; /* transição suave para aumento de tamanho */ 
+  border-radius: 0.4rem;
 }
+
+#skillsContainer span:hover {
+  transform: scale(1.05); /* aumenta levemente de tamanho ao clicar */
+  }
+
+#about{
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0)), url('./src/img/folder.jpg'), linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0)); 
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem;
+  border-top: 3px solid; 
+  border-image: linear-gradient(to right, transparent, #2bb62b, transparent) 1;
+}
+
+#about div{
+  width: 80vw;
+}
+
+#projects{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.projectItem{
+  height: 350px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 10px #131313;
+  transition:  0.3s ease;
+  gap: 1rem;
+}
+.projectItem img{
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: transform 0.3s ease 0.2;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+.projectItem:hover{
+  transform: scale(1.05);
+}
+
+.projectItem:hover img {
+  filter: grayscale(0%);
+}
+
 
 footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 2rem;
-    width: 100%;
+  width: 100%;
+  height: 3rem;
+  background-color: #00ff00;
 }
 
-@media(max-width: 425px) {
+/* Dispositivos pequenos (smartphones em retrato) */
+@media (max-width: 320px) {
+  /* Estilos para dispositivos menores que 320px */
+  header ul{
+    gap: 2rem;
+  }
 
-    header{
-        flex-direction: column;
-        justify-content: center;
-    }
-    main #home{
-        flex-direction: column;
-        justify-content: center;
-    }
+  #folderContent{
+    flex-direction: column-reverse;
+  }
+  #photoContainer img{
+    width: 200px;
+  }
+
+  #folderTexts h1{
+    font-size: 2rem;
+  }
+
+  #links{
+    font-size: 1.4rem;
+  }
+  
+  #skillsContainer{
+    grid-template-columns: repeat(2, 1fr);
+  
+  }
+
+  #projects{
+    flex-direction: column;
+  }
+
+  .projectItem{
+    width: 80vw;
+  }
+
+
+  #about{
+    padding: 1rem;
+  }
 }
+
+/* Smartphones padrão (retratos) */
+@media (min-width: 321px) and (max-width: 480px) {
+  /* Estilos para dispositivos entre 321px e 480px */
+}
+
+/* Smartphones em paisagem e pequenos tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Estilos para dispositivos entre 481px e 768px */
+}
+
+/* Tablets (retrato) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Estilos para dispositivos entre 769px e 1024px */
+}
+
+/* Tablets (paisagem) e desktops pequenos */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  /* Estilos para dispositivos entre 1025px e 1200px */
+}
+
+/* Desktops médios */
+@media (min-width: 1201px) and (max-width: 1440px) {
+  /* Estilos para dispositivos entre 1201px e 1440px */
+}
+
+/* Desktops grandes */
+@media (min-width: 1441px) and (max-width: 1920px) {
+  /* Estilos para dispositivos entre 1441px e 1920px */
+}
+
+/* Telas ultra grandes */
+@media (min-width: 1921px) {
+  /* Estilos para dispositivos maiores que 1921px */
+}
+
