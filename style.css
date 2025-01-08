@@ -19,23 +19,47 @@ header{
   height: 4rem;
 }
 
-header ul{
+nav {
+  position: relative;
+}
+
+
+#logo{
+  width: 9rem;
+}
+
+
+
+.menu {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
   list-style: none;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 header ul li{
   text-decoration: none;
   font-weight: 300;
-  
+}
+
+.menu a{
+  text-decoration: none;
 }
 
 main{
   height: auto;
   width: 100%;
+}
+
+#hamburger{
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
 }
 
 #folder{
@@ -202,13 +226,52 @@ main{
 
 footer{
   width: 100%;
-  height: 3rem;
-  background-color: #00ff00;
+  height: auto;
+  background-color: #091d09bb;
+  box-shadow: 4px 0px 20px black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 1rem 4rem;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0)), url('./src/img/folder.jpg'), linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0)); 
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
+
+}
+footer h2{
+  color: #00ff00;
 }
 
+#email{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
 /* Dispositivos pequenos (smartphones em retrato) */
 @media (max-width: 320px) {
   /* Estilos para dispositivos menores que 320px */
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(88, 88, 88, 0.952);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 150px;
+    padding: 10px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  #hamburger {
+    display: block;
+  }
+
   header ul{
     gap: 1rem;
   }
@@ -246,12 +309,39 @@ footer{
   #about{
     padding: 1rem;
   }
+
+  footer{
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  
  
 }
 
 /* Smartphones padrão (retratos) */
 @media (min-width: 321px) and (max-width: 480px) {
   /* Estilos para dispositivos entre 321px e 480px */
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(88, 88, 88, 0.952);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 150px;
+    padding: 10px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+
   #folderContent{
     flex-direction: column-reverse;
   }
@@ -274,11 +364,21 @@ footer{
     width: 80vw;
   }
 
+  footer{
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
 
 /* Smartphones em paisagem e pequenos tablets */
 @media (min-width: 481px) and (max-width: 768px) {
   /* Estilos para dispositivos entre 481px e 768px */
+  #logo{
+    width: 7rem;
+  }
+  nav{
+    gap: 4rem;
+  }
   #folderContent{
     flex-direction: column-reverse;
   }
@@ -299,6 +399,10 @@ footer{
 
   .projectItem{
     width: 80vw;
+  }
+  footer{
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }
 
