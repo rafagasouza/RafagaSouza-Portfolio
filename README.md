@@ -46,16 +46,14 @@ meu-portfolio/
 - **src/**: Pasta com imagens e ícones utilizados no projeto.
 
 ## Capturas de Tela
-*Adicione capturas de tela aqui, se desejar.*
+
+![folder](https://github.com/user-attachments/assets/ddec7c07-b442-4f76-9372-e7da6ddb9eee)
 
 ## Contato
-Se você deseja entrar em contato comigo, envie um e-mail para [devrafagamatos@gmail.com
-
-] ou me encontre nas redes sociais:
-- [LinkedIn](https://www.linkedin.com/in/seu-usuario)
-- [GitHub](https://github.com/seu-usuario)
+Se você deseja entrar em contato comigo, envie um e-mail para devrafagamatos@gmail.com ou me encontre nas redes sociais:
+- [LinkedIn](https://www.linkedin.com/in/rafagamatos)
+- [GitHub](https://github.com/rafagasouza)
 
 ---
 
-Feito com ❤ por [Seu Nome](https://github.com/seu-usuario).
 
